@@ -29,7 +29,7 @@ hr.thickline {
 }
 .centered-body {
     /*margin: 0px 50px;*/
-    max-width: 850px;
+    max-width: 1200px;
     margin: 0 auto;
     padding: 0 1rem;
 }
@@ -58,8 +58,21 @@ hr.thickline {
     padding: 0 0 10px 0;
 }
 .subheadline {
-    text-transform: uppercase;
+    text-transform: lowercase;
     font-size: 18px;
     font-weight: 200;
     color: #aaa;
+    margin-top: 0; /* Adjust this value as needed */
+    margin-bottom: 1.5rem; /* Adjust this value as needed */
+/*  border-bottom: 2px solid #d3d3d3; /* Thin gray line */
+  padding-bottom: 0; /* Space between text and the line */
+}
+.navbar-brand {
+  font-size: 32px; /* Or any size you want, e.g., 48px, 64px */
+  /* You might also want to adjust font-weight if needed */
+  /* font-weight: 500; */
+}
+nav {
+  border-bottom: 2px solid #d3d3d3; /* Add a thin gray line underneath */
+ /* padding-bottom: 0.5rem; /* Optional: Add a little space between content and line */
 }
