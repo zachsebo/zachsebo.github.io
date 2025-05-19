@@ -111,37 +111,54 @@
 
 .award-item {
   display: flex;
+  flex-wrap: wrap; /* Allow items to wrap on small screens */
   padding: 2px 0;
   border-bottom: 1px solid #ccc;
 }
 
 .award-name {
-  width: 350px;       /* fixed width for left column */
-  text-align: left;   /* align text left */
-  white-space: nowrap; /* prevent wrapping */
+  flex: 1 1 250px;   /* Flexible width, minimum 250px */
+  text-align: left;
+  white-space: normal; /* Allow wrapping */
   overflow: hidden;
-  text-overflow: ellipsis; /* optional: truncate long text */
+  text-overflow: ellipsis;
 }
 
 .award-source {
-  flex-grow: 1;       /* take remaining space */
-  text-align: left;   /* align text left */
-  white-space: nowrap;
+  flex: 1 1 200px;   /* Flexible width, minimum 200px */
+  text-align: left;
+  white-space: normal; /* Allow wrapping */
   overflow: hidden;
   text-overflow: ellipsis;
-  margin-left: 50px;
+  margin-left: 30px;
 }
 
 .award-intro {
-      margin-bottom: 0;  /* No space below the paragraph */
-    }
-</style>
-</head>
-<body>
+  margin-bottom: 0;
+}
 
-  <p class="award-intro">
-    <b>Selected Awards</b>
-  </p>
+/* Responsive adjustments for screens smaller than 600px */
+@media (max-width: 600px) {
+  .award-item {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 8px 0;
+  }
+  .award-name,
+  .award-source {
+    flex: none;
+    width: 100%;
+    margin-left: 0;
+    white-space: normal;
+    text-align: left;
+    padding: 2px 0;
+  }
+}
+</style>
+
+<p class="award-intro">
+  <b>Selected Awards</b>
+</p>
 <ul class="award-list">
   <li class="award-item">
     <span class="award-name"><a href="https://www.afar.org/grantee-profiles/zachary-sebo?token=m-gLZzNF9kGiM3IfbxiTqWzqKHepMEyx" target="_blank">Postdoctoral Fellowship in Aging Research</a></span>
@@ -156,6 +173,7 @@
     <span class="award-source">National Science Foundation</span>
   </li>
 </ul>
+
 
             </div>
             </div>
